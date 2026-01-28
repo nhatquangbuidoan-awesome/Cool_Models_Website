@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="css/feedBack.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>💬 Feedback</h1>
+  <p>Your opinion helps us improve</p>
+</header>
+
+<main>
+  <div class="feedback-card">
+    <form id="feedbackForm">
+      
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="review">Your Review</label>
+        <textarea id="review" rows="5" placeholder="Write your honest feedback..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Feedback</button>
+      <p class="success-msg" id="successMsg">✅ Feedback saved successfully!</p>
+
+    </form>
+  </div>
+
+  <a class="back-btn" href="http://127.0.0.1:5500/sanPhamCuoiKhoa/landingPage/landingPage.html">◀ Back</a>
+</main>
+
+<footer>
+  <p>© 2026 Cool Models</p>
+</footer>
+
+<script src="js/feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<a href="http://127.0.0.1:5500/sanPhamCuoiKhoa/landingPage/landingPage.html" class="back-btn">◀ Back</a>
+
+<main class="container">
+  <div class="register-card">
+    <h2>Create Account</h2>
+    <p class="subtitle">Join us in just a few seconds 🚀</p>
+
+    <form id="registerForm">
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Your username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-box">
+          <input id="password" type="password" placeholder="Enter from 8 to 16 characters." required>
+          <span class="toggle" onclick="togglePassword('password')">👁</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="password-box">
+          <input id="confirmPassword" type="password" placeholder="Re-enter password" required>
+          <span class="toggle" onclick="togglePassword('confirmPassword')">👁</span>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+
+      <p class="login-link">
+        Already have an account?
+        <a href="../loginSite/login.html">Login</a>
+      </p>
+
+    </form>
+  </div>
+</main>
+
+<script src="js/register.js"></script>
+</body>
+</html>

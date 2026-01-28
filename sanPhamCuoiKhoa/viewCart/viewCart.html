@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="viewCart.css">
+</head>
+
+<body>
+
+<header class="top-header">
+  <h1>🛒 Cool Models | Checkout</h1>
+</header>
+
+<a href="http://127.0.0.1:5500/sanPhamCuoiKhoa/landingPage/landingPage.html" class="back-btn">◀ Back</a>
+
+<main class="checkout-layout">
+
+  <!-- LEFT -->
+  <section class="left">
+
+    <!-- DELIVERY -->
+    <div class="card">
+      <h3>📍 Delivery address</h3>
+      <p id="location-text">Detecting location...</p>
+      <button onclick="getLocation()">Detect my location</button>
+    </div>
+
+    <!-- CART -->
+    <div class="card">
+      <h3>🛒 Products</h3>
+      <div id="cart-list"></div>
+    </div>
+
+  </section>
+
+  <!-- RIGHT -->
+  <aside class="right">
+
+    <!-- VOUCHER -->
+    <div class="card">
+      <h3>🎟 Voucher</h3>
+      <div id="voucher-box"></div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="card summary">
+      <h3>Order Summary</h3>
+
+      <div class="summary-row">
+        <span>Total</span>
+        <span id="total">0</span> VND
+      </div>
+
+      <button class="checkout-btn" onclick="openModal()">
+        Proceed to payment
+      </button>
+    </div>
+
+  </aside>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Order Summary</h3>
+    <p id="summary"></p>
+
+    <p class="total-line">
+      <b>Total:</b>
+      <span id="total-price"></span> VND
+    </p>
+
+    <select>
+      <option>Cash on delivery</option>
+      <option>Credit card</option>
+      <option>Bank transfer</option>
+    </select>
+
+    <button onclick="confirmOrder()">Buy now</button>
+    <button class="close" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<footer>
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <h4>Business inquires:</h4>
+                    <ul type="disc">
+                        <li>Headline: 0868843826</li>
+                        <li>Retailer's email: <a
+                                href="mailto: nhatquang.bui.doan@gmail.com">nhatquang.bui.doan@gmail.com</a></li>
+                    </ul>
+                    <br>
+                    <h4>Headquarters:</h4>
+                    <ul>
+                        <li>Hot Wheels: El Segundo, California, United States</li>
+                        <li>Mini GT: Taipei, Taiwan</li>
+                        <li>Majorette: 29 Rue De Monceau, 75008, Paris, France</li>
+                    </ul>
+                    <br>
+                    <h4>Social media</h4>
+                    <ul type="disc">
+                        <li>Hot Wheels</li>
+                        <ul>
+                            <li>Homepage: <a
+                                    href="https://shop.mattel.com/pages/hot-wheels">https://shop.mattel.com/pages/hot-wheels</a>
+                            </li>
+                            <li>Youtube: <a
+                                    href="https://www.youtube.com/@HotWheels">https://www.youtube.com/@HotWheels</a>
+                            </li>
+                            <li>Facebook: <a
+                                    href="https://www.facebook.com/hotwheels">https://www.facebook.com/hotwheels</a>
+                            </li>
+                        </ul>
+
+                        <li>Mini GT</li>
+                        <ul>
+                            <li>Homepage: <a href="https://minigt.tsm-models.com/">https://minigt.tsm-models.com/</a>
+                            </li>
+                            <li>Youtube: <a
+                                    href="https://www.youtube.com/@minigtofficial">https://www.youtube.com/@minigtofficial</a>
+                            </li>
+                            <li>Facebook: <a
+                                    href="https://www.facebook.com/minigtofficial/">https://www.facebook.com/minigtofficial/</a>
+                            </li>
+                        </ul>
+
+                        <li>Majorette</li>
+                        <ul>
+                            <li>Homepage: <a
+                                    href="https://www.majorette.com/majorette_en/home/">https://www.majorette.com/majorette_en/home/</a>
+                            </li>
+                            <li>Youtube: <a
+                                    href="https://www.youtube.com/user/MajoretteGermany">https://www.youtube.com/user/MajoretteGermany</a>
+                            </li>
+                            <li>Facebook: <a
+                                    href="https://www.facebook.com/groups/34805301393/">https://www.facebook.com/groups/34805301393/</a>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Store locations:</h4>
+                    <ul type="disc">
+                        <li>MKD Aeon Hà Đông - Hà Đông district</li>
+                        <li>MKD Vincom Mega Mall Smart City - Nam Từ Liêm district</li>
+                        <li>MKD Quang Trung Sơn Tây - Sơn Tây district</li>
+                        <li>MKD Quang Trung Hà Đông 02 - Hà Đông district</li>
+                        <li>MKD NGuyễn Văn Lộc - Hà Đông district</li>
+                        <li>MKD Trần Phú, Hà Đông - Hà Đông district</li>
+                        <li>MKD Garden HN - Từ Liêm district</li>
+                        <li>MKD Liễu Giai - Ba Đình district</li>
+                        <li>MKD Đội Cấn 02 - Ba Đình district</li>
+                        <li>MKD Kim Mã, Hà Nội - Ba Đình district</li>
+                        <li>MKD NGuyễn Khánh Toàn - Cầu Giấy district</li>
+                        <li>MKD Vincom Phạm Ngọc Thạch - Đống Đa district</li>
+                        <li>MKD Trần Phú, Hà Nội - Ba Đình district</li>
+                        <li>MKD Royal City - Thanh Xuân district</li>
+                        <li>MKD Lotte Kim Mã - Ba Đình district</li>
+                        <li>MKD Vũ Trọng Phụng - Thanh Xuân district</li>
+                        <li>MKD Lạc Long Quân - Tây Hồ district</li>
+                        <li>MKD Yên Hòa - Cầu Giấy district</li>
+                        <li>MKD Ngô Gia Tự - Long Biên district</li>
+                        <li>MKD Lotte Aquarium - Tây Hồ district</li>
+                        <li>MKD Ngoại Giao Đoàn - Bắc Từ Liêm district</li>
+                        <li>MKD Vincom Megamall Ocean Park - Gia Lâm district</li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3899480205514!2d105.78137782481016!3d20.977000350831403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adfc9eef752f%3A0x4ddac74676c8a688!2sMykingdom!5e0!3m2!1sen!2s!4v1759324142498!5m2!1sen!2s"
+                        width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </footer>
+
+<script src="viewCart.js"></script>
+</body>
+</html>

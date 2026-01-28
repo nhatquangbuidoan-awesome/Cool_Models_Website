@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="css/wishlist.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>⭐ Wishlist</h1>
+  <p>Tell us what products you want to see</p>
+</header>
+
+<main>
+  <div class="card">
+    <form id="wishlistForm">
+
+      <div class="form-group">
+        <label>Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Your Wishlist</label>
+        <textarea id="wishlist" rows="4"
+          placeholder="What products do you want us to sell?" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Wishlist</button>
+      <p class="success-msg" id="successMsg">✅ Wishlist saved!</p>
+
+    </form>
+  </div>
+
+  <a class="back-btn" href="http://127.0.0.1:5500/sanPhamCuoiKhoa/landingPage/landingPage.html">◀ Back</a>
+</main>
+
+<footer>
+  <p>© 2026 Cool Models</p>
+</footer>
+
+<script src="js/wishlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+  <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>🚨 Report an Issue</h1>
+  <p>Something went wrong? Let us know</p>
+</header>
+
+<main>
+  <div class="card danger">
+    <form id="reportForm">
+
+      <div class="form-group">
+        <label><b>Name</b></label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label><b>Email</b></label>
+        <input id="email" type="email" placeholder="example@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label><b>Problem description</b></label>
+        <textarea id="report" rows="5"
+          placeholder="Describe the issue in detail..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Report</button>
+      <p class="success-msg" id="successMsg">✅ Report sent!</p>
+
+    </form>
+  </div>
+
+  <a class="back-btn" href="http://127.0.0.1:5500/sanPhamCuoiKhoa/landingPage/landingPage.html">◀ Back</a>
+</main>
+
+<footer>
+  <p>© 2026 Cool Models</p>
+</footer>
+
+<script src="js/report.js"></script>
+</body>
+</html>
